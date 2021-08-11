@@ -31,6 +31,7 @@ public struct BarPagerTabStripSettings {
         public var barBackgroundColor: UIColor?
         public var selectedBarBackgroundColor: UIColor?
         public var barHeight: CGFloat = 5 // barHeight is ony set up when the bar is created programatically and not using storyboards or xib files.
+        public var barWidthSideMargin: CGFloat = 0
     }
 
     public var style = Style()
