@@ -52,7 +52,7 @@ open class ButtonBarView: UICollectionView {
     }()
 
     open lazy var baseLine: UIView = { [unowned self] in
-        let bar  = UIView(frame: CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1))
+        let bar  = UIView(frame: CGRect(x: 0, y: self.frame.size.height - baseLineHeight, width: self.frame.size.width, height: baseLineHeight))
         bar.backgroundColor = self.baseLineColor
         bar.layer.zPosition = 9998
         return bar
@@ -67,6 +67,7 @@ open class ButtonBarView: UICollectionView {
     var selectedBarAlignment: SelectedBarAlignment = .center
     var selectedIndex = 0
     var selectedBarWidth: CGFloat = 32
+    var baseLineHeight: CGFloat = 1
     var baseLineColor: UIColor? = UIColor(red: 248, green: 248, blue: 249, alpha: 1)
 
     required public init?(coder aDecoder: NSCoder) {
@@ -198,6 +199,7 @@ open class ButtonBarView: UICollectionView {
 
         selectedBarFrame.size.height = selectedBarHeight
         selectedBar.frame = selectedBarFrame
+        baseLine.frame = CGRect(x: 0, y: frame.size.height - baseLineHeight, width: frame.size.width, height: baseLineHeight)
     }
 
     override open func layoutSubviews() {
