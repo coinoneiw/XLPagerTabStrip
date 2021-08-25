@@ -67,7 +67,7 @@ open class ButtonBarView: UICollectionView {
     var selectedBarAlignment: SelectedBarAlignment = .center
     var selectedIndex = 0
     var selectedBarWidth: CGFloat = 32
-    var baseLineColor: UIColor = UIColor(red: 248, green: 248, blue: 249, alpha: 1)
+    var baseLineColor: UIColor? = UIColor(red: 248, green: 248, blue: 249, alpha: 1)
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
