@@ -52,7 +52,7 @@ open class ButtonBarView: UICollectionView {
     }()
 
     open lazy var baseLine: UIView = { [unowned self] in
-        let bar  = UIView(frame: CGRect(x: 0, y: self.frame.size.height - 1, width: 0, height: 1))
+        let bar  = UIView(frame: CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1))
         bar.backgroundColor = self.baseLineColor
         bar.layer.zPosition = 9998
         return bar
